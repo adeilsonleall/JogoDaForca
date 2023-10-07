@@ -55,6 +55,7 @@ console.log(pv_escolhida);
           if(pv_escolhida[i]==letra_digitada){ // Verifica se a palavra escolhida possuí igualdade com a nova letra capturada.
             descobrindo_pv+=letra_digitada; // Quando verdadeiro, adiciona a letra encontrada à variável em questão.         
             correspondecia=true;
+            acertos++;
           }else{
             descobrindo_pv+=pv_oculta[i]; // Condição falsa, adiciona asteriscos ou letras previamente salvas na variável pv_oculta.
           }
@@ -62,8 +63,6 @@ console.log(pv_escolhida);
   
         if(correspondecia==false){
           chances--;
-          pv_oculta=descobrindo_pv; // Atualiza variável com letra(s) encontrada(s).
-          lb_pv_oculta.innerHTML=pv_oculta; // Atualiza display.
           lb_chances.innerHTML=chances;
           btn.setAttribute("style","background-color: rgb(255, 148, 115);")
           switch(chances){
@@ -84,15 +83,16 @@ console.log(pv_escolhida);
             break;
             case 0:
               img_boneco.setAttribute("src","img/img6.png")
-              lb_pv_oculta.setAttribute("style","color: red;"); 
+              lb_pv_oculta.setAttribute("style","color: red;");
+              lb_pv_oculta.innerHTML=pv_escolhida; // Atualiza display. 
             break;
           }
-        }else{
-          acertos++;
+        }else{          
           btn.setAttribute("style","background-color: rgb(92, 252, 145);")
           pv_oculta=descobrindo_pv; // Atualiza variável com letra(s) encontrada(s).
           lb_pv_oculta.innerHTML=pv_oculta; // Atualiza display.
           lb_chances.innerHTML=chances;
+          if(acertos==pv_escolhida.length) lb_pv_oculta.setAttribute("style","color: green; font-size: 18pt");
         }
       } 
     })   
