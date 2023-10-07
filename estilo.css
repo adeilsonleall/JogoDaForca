@@ -1,0 +1,37 @@
+body{
+    display: flex;
+    justify-content: center;
+}
+.container1{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+}
+.container2{
+    display: flex;
+    justify-content: center;
+}
+
+.container5{
+    display: flex;
+    justify-content: left;
+}
+
+.btn{
+    border: 1px solid black;
+    border-radius: 5px;
+    padding: 5px;
+    margin: 2px 2px 2px 2px;
+    width: 20px;
+    height: auto;
+    text-align: center;
+}
+.btn_atualizar{
+    border: 1px solid black;
+    border-radius: 5px;
+    padding: 5px;
+    margin: 5px 5px 5px 5px;
+    width: auto;
+    height: auto;
+    text-align: center;
+}
