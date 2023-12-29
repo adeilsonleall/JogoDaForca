@@ -1,27 +1,37 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Jogo da Forca</title>
     <link rel="stylesheet" href="estilo.css">
 </head>
-<body>
-    <header class="border">
-        <h1>Jogo da Forca</h1>
-    </header>
 
-    <div id="container1" class="container1 border">  
-        <label>Tente descobrir a palavra secreta. Atualize a página para uma nova rodada.</label> 
-        <h3 style="font-size: 12pt;">Dica: <label id="lb_dica" style="font-size: 12pt;"></label></h3> 
-        <h3>Chances: <label id="lb_chances"></label></h3>
-        <img src="img/img0.png" alt="forca" id="boneco">
-        <br>
-        <div>
-            <label style="margin: 10px 10px 10px 10px; font-size: 16pt;">Palavra: </label>
-            <label id="lb_pv_oculta" style="margin: 10px 10px 10px 10px; font-size: 16pt;"></label>
+<body>
+
+    <div id="container" class="container">  
+        <h1>Jogo da Forca</h1>
+
+        <div id="descricao">
+            <label>Tente descobrir a palavra secreta. Atualize a página para uma nova rodada.</label>
         </div>
-        <br>
+
+        <div id="teste">
+            <label id="lb_chances"></label>
+            <span id="sp_chances">Chances</span>
+            <img src="img/img0.png" alt="forca" id="boneco">
+            <label id="lb_dica" ></label>
+            <span id="sp_dica">Dica</span>
+        </div>
+
+        
+
+        <div id="palavra">
+            <label>Palavra: </label>
+            <label id="lb_pv_oculta"></label>
+        </div>
+    
         <div id="boxBtn1" class="boxBtn">
             <button id="A" class="btn">A</button>
             <button id="B" class="btn">B</button>

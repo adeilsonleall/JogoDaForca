@@ -75,7 +75,7 @@ lb_pv_oculta.innerHTML=pv_oculta;
             case 2: img_boneco.setAttribute("src","img/img4.png"); break;
             case 1: img_boneco.setAttribute("src","img/img5.png"); break;
             case 0: img_boneco.setAttribute("src","img/img6.png"); // Quando as chances se esgotarem além de trocar a imagem a palavra será mostrada.
-                    lb_pv_oculta.setAttribute("style","color: red; font-size: 22pt");  // A cor do texto é trocada para vermelho indicando que o usuário esgotou suas chances e perdeu a rodada. 
+                    lb_pv_oculta.setAttribute("style","color: red;");  // A cor do texto é trocada para vermelho indicando que o usuário esgotou suas chances e perdeu a rodada. 
                     lb_pv_oculta.innerHTML=pv_escolhida; break; // Mostra a palavra.
           }
         }else{  // Quando huver coorenpondencia entre a letra e a palavra, está rotina é execultada.        
@@ -83,7 +83,7 @@ lb_pv_oculta.innerHTML=pv_oculta;
           btn.setAttribute('disabled', 'disabled');
           pv_oculta=descobrindo_pv; // Atualiza variável com letra(s) encontrada(s).
           lb_pv_oculta.innerHTML=pv_oculta; // Atualiza display.
-          if(acertos==pv_escolhida.length) lb_pv_oculta.setAttribute("style","color: green; font-size: 22pt");
+          if(acertos==pv_escolhida.length) lb_pv_oculta.setAttribute("style","color: green;");
         }
       } 
     })   
